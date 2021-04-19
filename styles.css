@@ -1,0 +1,45 @@
+.mainBody
+{
+    background-color: #001010;
+    color: white;
+}
+.piece
+{
+    display: inline-flex;
+    width: 100px;
+    height: 100px;
+    background-color: none;
+    border: gray solid 1px;
+    user-select: none;
+}
+.positionHorizontal
+{
+    width: 150px;
+    height: 10px;
+    background-color: gray;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    border: gray solid 1px;
+}
+.positionVertical
+{   
+    display: inline-block;
+    width: 10px;
+    height: 150px;
+    background-color: gray;
+    margin-top: 132.5px;
+    margin-left: 0px;
+    margin-right: 0px;
+    border: gray solid 1px;
+}
+.grid
+{
+    display: inline-block;
+    margin: 10px;
+}
+.face
+{
+    display:flex;
+    justify-content: center;
+    background-color: none;
+}

@@ -1,0 +1,307 @@
+<html>
+    <head>
+        <title>Rubik Cube</title>
+        <link rel="stylesheet" type="text/css" href="styles.css">
+    </head>
+    <body class="mainBody">
+        <h3 id="faceHeading">FRONT</h3>
+        <div class="face">
+            <div class="positionVertical" id="leftColor"></div>
+            <div class="grid">
+                <div style="display: flex; justify-content: center;">
+                    <div class="positionHorizontal" id="upColor"></div>
+                </div>
+
+                
+                <div id="front">
+                    <div>
+                        <div class="piece" id="f0" onclick="F[0]++; reColor(F,'f');"></div>
+                        <div class="piece" id="f1" onclick="F[1]++; reColor(F,'f');"></div>
+                        <div class="piece" id="f2" onclick="F[2]++; reColor(F,'f');"></div>
+                    </div>
+                    <div>
+                        <div class="piece" id="f3" onclick="F[3]++; reColor(F,'f');"></div>
+                        <div class="piece" id="f4" onclick="F[4]++; reColor(F,'f');"></div>
+                        <div class="piece" id="f5" onclick="F[5]++; reColor(F,'f');"></div>
+                    </div>
+                    <div>
+                        <div class="piece" id="f6" onclick="F[6]++; reColor(F,'f');"></div>
+                        <div class="piece" id="f7" onclick="F[7]++; reColor(F,'f');"></div>
+                        <div class="piece" id="f8" onclick="F[8]++; reColor(F,'f');"></div>
+                    </div>
+                </div>
+
+                <div id="up" style="display: none;">
+                    <div>
+                        <div class="piece" id="u0" onclick="U[0]++; reColor(U,'u');"></div>
+                        <div class="piece" id="u1" onclick="U[1]++; reColor(U,'u');"></div>
+                        <div class="piece" id="u2" onclick="U[2]++; reColor(U,'u');"></div>
+                    </div>
+                    <div>
+                        <div class="piece" id="u3" onclick="U[3]++; reColor(U,'u');"></div>
+                        <div class="piece" id="u4" onclick="U[4]++; reColor(U,'u');"></div>
+                        <div class="piece" id="u5" onclick="U[5]++; reColor(U,'u');"></div>
+                    </div>
+                    <div>
+                        <div class="piece" id="u6" onclick="U[6]++; reColor(U,'u');"></div>
+                        <div class="piece" id="u7" onclick="U[7]++; reColor(U,'u');"></div>
+                        <div class="piece" id="u8" onclick="U[8]++; reColor(U,'u');"></div>
+                    </div>
+                </div>
+
+                <div id="left" style="display: none;">
+                    <div>
+                        <div class="piece" id="l0" onclick="L[0]++; reColor(L,'l');"></div>
+                        <div class="piece" id="l1" onclick="L[1]++; reColor(L,'l');"></div>
+                        <div class="piece" id="l2" onclick="L[2]++; reColor(L,'l');"></div>
+                    </div>
+                    <div>
+                        <div class="piece" id="l3" onclick="L[3]++; reColor(L,'l');"></div>
+                        <div class="piece" id="l4" onclick="L[4]++; reColor(L,'l');"></div>
+                        <div class="piece" id="l5" onclick="L[5]++; reColor(L,'l');"></div>
+                    </div>
+                    <div>
+                        <div class="piece" id="l6" onclick="L[6]++; reColor(L,'l');"></div>
+                        <div class="piece" id="l7" onclick="L[7]++; reColor(L,'l');"></div>
+                        <div class="piece" id="l8" onclick="L[8]++; reColor(L,'l');"></div>
+                    </div>
+                </div>
+
+                <div id="right" style="display: none;">
+                    <div>
+                        <div class="piece" id="r0" onclick="R[0]++; reColor(R,'r');"></div>
+                        <div class="piece" id="r1" onclick="R[1]++; reColor(R,'r');"></div>
+                        <div class="piece" id="r2" onclick="R[2]++; reColor(R,'r');"></div>
+                    </div>
+                    <div>
+                        <div class="piece" id="r3" onclick="R[3]++; reColor(R,'r');"></div>
+                        <div class="piece" id="r4" onclick="R[4]++; reColor(R,'r');"></div>
+                        <div class="piece" id="r5" onclick="R[5]++; reColor(R,'r');"></div>
+                    </div>
+                    <div>
+                        <div class="piece" id="r6" onclick="R[6]++; reColor(R,'r');"></div>
+                        <div class="piece" id="r7" onclick="R[7]++; reColor(R,'r');"></div>
+                        <div class="piece" id="r8" onclick="R[8]++; reColor(R,'r');"></div>
+                    </div>
+                </div>
+
+                <div id="down" style="display: none;">
+                    <div>
+                        <div class="piece" id="d0" onclick="D[0]++; reColor(D,'d');"></div>
+                        <div class="piece" id="d1" onclick="D[1]++; reColor(D,'d');"></div>
+                        <div class="piece" id="d2" onclick="D[2]++; reColor(D,'d');"></div>
+                    </div>
+                    <div>
+                        <div class="piece" id="d3" onclick="D[3]++; reColor(D,'d');"></div>
+                        <div class="piece" id="d4" onclick="D[4]++; reColor(D,'d');"></div>
+                        <div class="piece" id="d5" onclick="D[5]++; reColor(D,'d');"></div>
+                    </div>
+                    <div>
+                        <div class="piece" id="d6" onclick="D[6]++; reColor(D,'d');"></div>
+                        <div class="piece" id="d7" onclick="D[7]++; reColor(D,'d');"></div>
+                        <div class="piece" id="d8" onclick="D[8]++; reColor(D,'d');"></div>
+                    </div>
+                </div>
+
+                <div id="back" style="display: none;">
+                    <div>
+                        <div class="piece" id="b0" onclick="B[0]++; reColor(B,'b');"></div>
+                        <div class="piece" id="b1" onclick="B[1]++; reColor(B,'b');"></div>
+                        <div class="piece" id="b2" onclick="B[2]++; reColor(B,'b');"></div>
+                    </div>
+                    <div>
+                        <div class="piece" id="b3" onclick="B[3]++; reColor(B,'b');"></div>
+                        <div class="piece" id="b4" onclick="B[4]++; reColor(B,'b');"></div>
+                        <div class="piece" id="b5" onclick="B[5]++; reColor(B,'b');"></div>
+                    </div>
+                    <div>
+                        <div class="piece" id="b6" onclick="B[6]++; reColor(B,'b');"></div>
+                        <div class="piece" id="b7" onclick="B[7]++; reColor(B,'b');"></div>
+                        <div class="piece" id="b8" onclick="B[8]++; reColor(B,'b');"></div>
+                    </div>
+                </div>
+
+
+                <div style="display: flex; justify-content: center;">
+                    <div class="positionHorizontal" id="downColor"></div>
+                </div>
+                <div style="display: flex; justify-content: center;">
+                    <button class="submitButton" onclick="submitButton();">SUBMIT</button>
+                </div>
+            </div>
+            <div class="positionVertical" id="rightColor"></div>
+        </div>
+
+    </body>
+    <script>
+        var ColorList=["white", "blue", "red", "green", "yellow", "orange"];
+        var NullColor="#001010";
+        var F=[-1,-1,-1,-1,-1,-1,-1,-1,-1];
+        var U=[-1,-1,-1,-1,-1,-1,-1,-1,-1];
+        var L=[-1,-1,-1,-1,-1,-1,-1,-1,-1];
+        var R=[-1,-1,-1,-1,-1,-1,-1,-1,-1];
+        var D=[-1,-1,-1,-1,-1,-1,-1,-1,-1];
+        var B=[-1,-1,-1,-1,-1,-1,-1,-1,-1];
+        var FRONT=LEFT=RIGHT=UP=DOWN=BACK=0;
+        var submitPointer = 0;
+        
+        function init()
+        {
+        	document.querySelector("#downColor").style.backgroundColor=NullColor;
+            document.querySelector("#upColor").style.backgroundColor=NullColor;
+            document.querySelector("#leftColor").style.backgroundColor=NullColor;
+            document.querySelector("#rightColor").style.backgroundColor=NullColor;
+        }
+        init();
+
+        function reColor(A, w)
+        {
+            for(var i=0; i<9; i++)
+                A[i]=A[i]%6;
+            for(var i=0; i<9; i++)
+                document.querySelector("#"+w+i).style.backgroundColor=ColorList[A[i]];  
+            //console.log(F);
+            //console.log(U);
+            //console.log(L);
+            //console.log(R);
+            //console.log(D);
+            //console.log(B);
+        }
+        function translateInput(A, V, c)
+        {
+            for(var i=0; i<9; i++)
+                if(A[i]==V)
+                    A[i]=c;
+        }
+        function createSequence(A)
+        {
+            var seq="";
+            for(var i=0; i<9; i++)
+                seq+=A[i];
+            return seq;
+        }
+        function createInputSequence()
+        {
+            translateInput(F, FRONT, 'F');
+            translateInput(L, FRONT, 'F');
+            translateInput(R, FRONT, 'F');
+            translateInput(U, FRONT, 'F');
+            translateInput(D, FRONT, 'F');
+            translateInput(B, FRONT, 'F');
+
+            translateInput(F, LEFT, 'L');
+            translateInput(L, LEFT, 'L');
+            translateInput(R, LEFT, 'L');
+            translateInput(U, LEFT, 'L');
+            translateInput(D, LEFT, 'L');
+            translateInput(B, LEFT, 'L');
+
+            translateInput(F, RIGHT, 'R');
+            translateInput(L, RIGHT, 'R');
+            translateInput(R, RIGHT, 'R');
+            translateInput(U, RIGHT, 'R');
+            translateInput(D, RIGHT, 'R');
+            translateInput(B, RIGHT, 'R');
+
+            translateInput(F, UP, 'U');
+            translateInput(L, UP, 'U');
+            translateInput(R, UP, 'U');
+            translateInput(U, UP, 'U');
+            translateInput(D, UP, 'U');
+            translateInput(B, UP, 'U');
+
+            translateInput(F, DOWN, 'D');
+            translateInput(L, DOWN, 'D');
+            translateInput(R, DOWN, 'D');
+            translateInput(U, DOWN, 'D');
+            translateInput(D, DOWN, 'D');
+            translateInput(B, DOWN, 'D');
+
+            translateInput(F, BACK, 'B');
+            translateInput(L, BACK, 'B');
+            translateInput(R, BACK, 'B');
+            translateInput(U, BACK, 'B');
+            translateInput(D, BACK, 'B');
+            translateInput(B, BACK, 'B');
+
+            var sequence="";
+            sequence+=createSequence(U);
+            sequence+=createSequence(L);
+            sequence+=createSequence(F);
+            sequence+=createSequence(R);
+            sequence+=createSequence(B);
+            sequence+=createSequence(D);
+
+            console.log(sequence);
+        }
+        function submitButton()
+        {
+            if(submitPointer==0)
+            {   
+                FRONT=F[4];
+                document.querySelector("#front").style.display="none";
+                document.querySelector("#up").style.display="block";
+                document.querySelector("#downColor").style.backgroundColor=ColorList[FRONT];
+                document.querySelector("#upColor").style.backgroundColor=NullColor;
+                document.querySelector("#leftColor").style.backgroundColor=NullColor;
+                document.querySelector("#rightColor").style.backgroundColor=NullColor;
+                document.querySelector("#faceHeading").innerHTML="UP";
+                submitPointer++;
+            }
+            else if(submitPointer==1)
+            {   
+                UP=U[4];
+                document.querySelector("#up").style.display="none";
+                document.querySelector("#left").style.display="block";
+                document.querySelector("#downColor").style.backgroundColor=NullColor;
+                document.querySelector("#upColor").style.backgroundColor=ColorList[UP];
+                document.querySelector("#leftColor").style.backgroundColor=NullColor;
+                document.querySelector("#rightColor").style.backgroundColor=ColorList[FRONT];
+                document.querySelector("#faceHeading").innerHTML="LEFT";
+                submitPointer++;
+            }
+            else if(submitPointer==2)
+            {   
+                LEFT=L[4];
+                document.querySelector("#left").style.display="none";
+                document.querySelector("#right").style.display="block";
+                document.querySelector("#downColor").style.backgroundColor=NullColor;
+                document.querySelector("#upColor").style.backgroundColor=ColorList[UP];
+                document.querySelector("#leftColor").style.backgroundColor=ColorList[FRONT];
+                document.querySelector("#rightColor").style.backgroundColor=NullColor;
+                document.querySelector("#faceHeading").innerHTML="RIGHT";
+                submitPointer++;
+            }
+            else if(submitPointer==3)
+            {   
+                RIGHT=R[4];
+                document.querySelector("#right").style.display="none";
+                document.querySelector("#down").style.display="block";
+                document.querySelector("#downColor").style.backgroundColor=NullColor;
+                document.querySelector("#upColor").style.backgroundColor=ColorList[FRONT];
+                document.querySelector("#leftColor").style.backgroundColor=ColorList[LEFT];
+                document.querySelector("#rightColor").style.backgroundColor=ColorList[RIGHT];
+                document.querySelector("#faceHeading").innerHTML="DOWN";
+                submitPointer++;
+            }
+            else if(submitPointer==4)
+            {   
+                DOWN=D[4];
+                document.querySelector("#down").style.display="none";
+                document.querySelector("#back").style.display="block";
+                document.querySelector("#downColor").style.backgroundColor=ColorList[DOWN];
+                document.querySelector("#upColor").style.backgroundColor=ColorList[UP];
+                document.querySelector("#leftColor").style.backgroundColor=ColorList[RIGHT];
+                document.querySelector("#rightColor").style.backgroundColor=ColorList[LEFT];
+                document.querySelector("#faceHeading").innerHTML="BACK";
+                submitPointer++;
+            }
+            else if(submitPointer==5)
+            {   
+                BACK=B[4];
+                createInputSequence();
+                alert("Input Sequence in Console");
+            }
+        }
+    </script>
+</html>
